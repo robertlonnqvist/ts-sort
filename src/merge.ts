@@ -1,5 +1,5 @@
 function _merge(left: number[], right: number[]): number[] {
-  var result: number[] = [];
+  const result: number[] = [];
 
   while (left.length && right.length) {
     if (left[0] <= right[0]) {
@@ -20,13 +20,13 @@ function _merge(left: number[], right: number[]): number[] {
   return result;
 }
 
-module.exports = function merge(list: number[]): number[] {
+export default function merge(list: number[]): number[] {
   if (list.length < 2) {
     return list;
   }
-  var middle = list.length / 2;
-  var left = list.slice(0, middle);
-  var right = list.slice(middle, list.length);
+  const middle = list.length / 2;
+  const left = list.slice(0, middle);
+  const right = list.slice(middle, list.length);
 
   return _merge(merge(left), merge(right));
 }

@@ -1,15 +1,25 @@
 {
-  "name": "sort",
+  "name": "ts-sort",
   "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
+  "description": "Simple sotrting algorithms",
+  "main": "src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "prettier -c '**/*.ts' && tslint -p . && tsc",
+    "test": "mocha -r ts-node/register src/**/*.spec.ts",
+    "format": "prettier --write '**/*.ts'"
   },
-  "author": "",
+  "author": "Robert Lönnqvist",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
     "@types/node": "^11.13.4",
+    "@types/mocha": "^5.2.6",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.3",
+    "prettier": "^1.16.4",
+    "ts-node": "^8.0.3",
+    "tslint": "^5.15.0",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.4.3"
   }
 }
