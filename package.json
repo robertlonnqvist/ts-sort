@@ -4,9 +4,9 @@
   "description": "Simple sotrting algorithms",
   "main": "src/main.js",
   "scripts": {
-    "build": "prettier -c '**/*.ts' && tslint -p . && tsc",
+    "build": "prettier -c 'src/**/*.ts' && tslint -p . && tsc",
     "test": "mocha -r ts-node/register src/**/*.spec.ts",
-    "format": "prettier --write '**/*.ts'"
+    "format": "prettier --write 'src/**/*.ts'"
   },
   "author": "Robert Lönnqvist",
   "license": "ISC",
