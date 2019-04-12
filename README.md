@@ -1,0 +1,1 @@
+# Simple sorting algorithms written i Typescript
