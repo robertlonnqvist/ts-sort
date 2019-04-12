@@ -1,9 +1,3 @@
-function swap(items: number[], left: number, right: number) {
-  const temp = items[left];
-  items[left] = items[right];
-  items[right] = temp;
-}
-
 function partition(items: number[], left: number, right: number) {
   const pivot = items[Math.floor((left + right) / 2)];
   let i = left;
@@ -17,7 +11,7 @@ function partition(items: number[], left: number, right: number) {
       j--;
     }
     if (i <= j) {
-      swap(items, i, j);
+      [items[i], items[j]] = [items[j], items[i]];
       i++;
       j--;
     }
