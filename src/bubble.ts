@@ -1,4 +1,4 @@
-export default function bubble(items: readonly number[]): number[] {
+export default function(items: readonly number[]): number[] {
   const arr = [...items];
   for (let j = 0; j < arr.length; j++) {
     for (let i = 0; i < arr.length - 1 - j; i++) {
