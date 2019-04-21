@@ -1,11 +1,10 @@
-export default function(items: readonly number[]): number[] {
-  const arr = [...items];
-  for (let j = 0; j < arr.length; j++) {
-    for (let i = 0; i < arr.length - 1 - j; i++) {
-      if (arr[i] > arr[i + 1]) {
-        [arr[i + 1], arr[i]] = [arr[i], arr[i + 1]];
+export default function(items: number[]): number[] {
+  for (let j = 0; j < items.length; j++) {
+    for (let i = 0; i < items.length - 1 - j; i++) {
+      if (items[i] > items[i + 1]) {
+        [items[i + 1], items[i]] = [items[i], items[i + 1]];
       }
     }
   }
-  return arr;
+  return items;
 }

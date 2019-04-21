@@ -1,14 +1,13 @@
-export default function(items: readonly number[]): number[] {
-  const arr = [...items];
-  for (let i = 0; i < arr.length; i++) {
-    const element = arr[i];
+export default function(items: number[]): number[] {
+  for (let i = 0; i < items.length; i++) {
+    const element = items[i];
 
     let j = i;
-    while (j > 0 && arr[j - 1] > element) {
-      arr[j] = arr[j - 1];
+    while (j > 0 && items[j - 1] > element) {
+      items[j] = items[j - 1];
       j = j - 1;
     }
-    arr[j] = element;
+    items[j] = element;
   }
-  return arr;
+  return items;
 }

@@ -20,9 +20,9 @@ function _merge(left: number[], right: number[]): number[] {
   return result;
 }
 
-export default function merge(items: readonly number[]): number[] {
+export default function merge(items: number[]): number[] {
   if (items.length < 2) {
-    return items as number[];
+    return items;
   }
   const middle = items.length / 2;
   const left = items.slice(0, middle);
