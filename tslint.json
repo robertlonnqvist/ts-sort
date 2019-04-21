@@ -8,7 +8,8 @@
     "rules": {
         "no-any": true,
         "no-implicit-dependencies": [true, "dev"],
-        "no-console": false
+        "no-console": false,
+        "object-literal-sort-keys": false
     },
     "rulesDirectory": []
 }

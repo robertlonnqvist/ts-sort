@@ -20,13 +20,13 @@ function _merge(left: number[], right: number[]): number[] {
   return result;
 }
 
-export default function merge(list: number[]): number[] {
-  if (list.length < 2) {
-    return list;
+export default function merge(items: readonly number[]): number[] {
+  if (items.length < 2) {
+    return items as number[];
   }
-  const middle = list.length / 2;
-  const left = list.slice(0, middle);
-  const right = list.slice(middle, list.length);
+  const middle = items.length / 2;
+  const left = items.slice(0, middle);
+  const right = items.slice(middle, items.length);
 
   return _merge(merge(left), merge(right));
 }

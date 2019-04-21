@@ -19,7 +19,7 @@ function partition(items: number[], left: number, right: number) {
   return i;
 }
 
-export default function quick(
+function _quick(
   items: number[],
   left: number = 0,
   right: number = items.length - 1
@@ -27,11 +27,15 @@ export default function quick(
   if (items.length > 1) {
     const index = partition(items, left, right);
     if (left < index - 1) {
-      quick(items, left, index - 1);
+      _quick(items, left, index - 1);
     }
     if (index < right) {
-      quick(items, index, right);
+      _quick(items, index, right);
     }
   }
   return items;
+}
+
+export default function quick(items: readonly number[]): number[] {
+  return _quick([...items]);
 }

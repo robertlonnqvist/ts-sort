@@ -7,8 +7,21 @@ import selection from "./selection";
 
 const list = random(process.argv.length > 2 ? +process.argv[2] : 10);
 
-console.log(`bubble:    ${bubble(list.slice())}`);
-console.log(`insertion: ${insertion(list.slice())}`);
-console.log(`merge:     ${merge(list.slice())}`);
-console.log(`quick:     ${quick(list.slice())}`);
-console.log(`selection: ${selection(list.slice())}`);
+const result = [
+  { name: "bubble", impl: bubble },
+  { name: "insertion", impl: insertion },
+  { name: "merge", impl: merge },
+  { name: "quick", impl: quick },
+  { name: "selection", impl: selection }
+].map(o => {
+  const start = process.hrtime();
+  o.impl(list);
+  const elapsed = process.hrtime(start);
+  return {
+    name: o.name,
+    time: `${elapsed[0]}s ${elapsed[1] / 100000}ms`,
+    items: list.length
+  };
+});
+
+console.table(result);

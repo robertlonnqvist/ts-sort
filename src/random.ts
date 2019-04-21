@@ -6,9 +6,9 @@ function* generator() {
 
 export default function(length: number) {
   const g = generator();
-  const list = [];
-  while (list.length < length) {
-    list.push(g.next().value);
+  const items = [];
+  while (items.length < length) {
+    items.push(g.next().value);
   }
-  return list;
+  return items;
 }

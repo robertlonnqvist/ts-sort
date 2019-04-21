@@ -1,16 +1,17 @@
-export default function(list: number[]) {
-  for (let i = 0; i < list.length; i++) {
+export default function(items: readonly number[]): number[] {
+  const arr = [...items];
+  for (let i = 0; i < arr.length; i++) {
     let index = 0;
-    let smallest = list[i];
-    for (let j = i + 1; j < list.length; j++) {
-      if (smallest > list[j]) {
+    let smallest = arr[i];
+    for (let j = i + 1; j < arr.length; j++) {
+      if (smallest > arr[j]) {
         index = j;
-        smallest = list[j];
+        smallest = arr[j];
       }
     }
     if (index > i) {
-      [list[index], list[i]] = [list[i], list[index]];
+      [arr[index], arr[i]] = [arr[i], arr[index]];
     }
   }
-  return list;
+  return arr;
 }
