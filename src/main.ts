@@ -20,7 +20,7 @@ const result = [
   const elapsed = process.hrtime(start);
   return {
     name: o.name,
-    time: `${elapsed[0]}s ${elapsed[1] / 100000}ms`,
+    time: `${elapsed[0]}s ${elapsed[1] / 1000000}ms`,
     items: copy.length
   };
 });
