@@ -20,7 +20,8 @@ function _merge(left: number[], right: number[]): number[] {
   return result;
 }
 
-export default function merge(items: number[]): number[] {
+export default function merge(input: readonly number[]): number[] {
+  const items = [...input];
   if (items.length < 2) {
     return items;
   }

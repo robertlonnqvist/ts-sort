@@ -14,14 +14,13 @@ const result = [
   { name: "quick", impl: quick },
   { name: "selection", impl: selection }
 ].map(o => {
-  const copy = [...items];
   const start = process.hrtime();
-  o.impl(copy);
+  const sorted = o.impl(items);
   const elapsed = process.hrtime(start);
   return {
     name: o.name,
     time: `${elapsed[0]}s ${elapsed[1] / 1000000}ms`,
-    items: copy.length
+    items: sorted.length
   };
 });
 

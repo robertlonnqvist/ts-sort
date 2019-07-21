@@ -1,4 +1,5 @@
-export default function(items: number[]): number[] {
+export default function(input: readonly number[]): number[] {
+  const items = [...input];
   for (let j = 0; j < items.length; j++) {
     for (let i = 0; i < items.length - 1 - j; i++) {
       if (items[i] > items[i + 1]) {
