@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import "mocha";
+import { describe, it } from "mocha";
 import bubble from "./bubble";
 
 describe("Bubble sort", () => {

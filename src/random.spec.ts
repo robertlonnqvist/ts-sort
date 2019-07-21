@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import "mocha";
+import { describe, it } from "mocha";
 import random from "./random";
 
 describe("Random list generator", () => {
