@@ -11,15 +11,15 @@
   "author": "Robert Lönnqvist",
   "license": "ISC",
   "dependencies": {
-    "@types/chai": "4.1.7",
-    "@types/node": "12.6.8",
+    "@types/chai": "4.2.2",
+    "@types/node": "12.7.5",
     "@types/mocha": "5.2.7",
     "chai": "4.2.0",
     "mocha": "6.2.0",
     "prettier": "1.18.2",
     "ts-node": "8.3.0",
-    "tslint": "5.18.0",
+    "tslint": "5.20.0",
     "tslint-config-prettier": "1.18.0",
-    "typescript": "3.5.3"
+    "typescript": "3.6.3"
   }
 }
