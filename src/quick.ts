@@ -32,6 +32,6 @@ function quick(items: number[], left = 0, right = items.length - 1): number[] {
   return items;
 }
 
-export default function(items: readonly number[]): number[] {
+export default function (items: readonly number[]): number[] {
   return quick([...items]);
 }

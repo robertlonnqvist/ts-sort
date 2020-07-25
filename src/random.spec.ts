@@ -9,6 +9,6 @@ describe("Random list generator", () => {
 
   it("should generate list with numbers", () => {
     const items = random(10);
-    items.forEach(l => expect(l).to.be.an("number"));
+    items.forEach((l) => expect(l).to.be.an("number"));
   });
 });

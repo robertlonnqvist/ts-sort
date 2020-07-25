@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import { describe, it } from "mocha";
 
-export default function(
+export default function (
   name: string,
   sorter: (n: readonly number[]) => number[]
 ): void {
