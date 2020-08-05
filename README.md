@@ -1,7 +1,8 @@
-# Simple sorting algorithms written i Typescript
+# Simple sorting algorithms written in Typescript
 
 Install and run all the tests with:
 
 ```shell
-npm install && npm test 
+npm install && npm test
 ```
+
