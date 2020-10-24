@@ -9,6 +9,6 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "rules": {
-  }
+  "rules": {},
+  "ignorePatterns": ["src/*.js", "src/*.js.map"]
 }
