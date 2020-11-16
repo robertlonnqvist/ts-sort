@@ -4,11 +4,11 @@ function* generator(): IterableIterator<number> {
   }
 }
 
-export default function (length: number): number[] {
+export default (length: number): number[] => {
   const g = generator();
   const items = [];
   while (items.length < length) {
     items.push(g.next().value);
   }
   return items;
-}
+};

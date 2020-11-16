@@ -1,4 +1,4 @@
-function _merge(left: number[], right: number[]): number[] {
+const _merge = (left: number[], right: number[]): number[] => {
   const result: number[] = [];
 
   while (left.length && right.length) {
@@ -18,9 +18,9 @@ function _merge(left: number[], right: number[]): number[] {
   }
 
   return result;
-}
+};
 
-export default function merge(input: readonly number[]): number[] {
+const merge = (input: readonly number[]): number[] => {
   const items = [...input];
   if (items.length < 2) {
     return items;
@@ -30,4 +30,6 @@ export default function merge(input: readonly number[]): number[] {
   const right = items.slice(middle, items.length);
 
   return _merge(merge(left), merge(right));
-}
+};
+
+export default merge;
