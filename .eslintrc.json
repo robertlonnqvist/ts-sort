@@ -10,5 +10,5 @@
     "sourceType": "module"
   },
   "rules": {},
-  "ignorePatterns": ["src/*.js", "src/*.js.map"]
+  "ignorePatterns": ["dist/"]
 }
