@@ -1,23 +1,21 @@
-const _merge = (left: number[], right: number[]): number[] => {
+const _merge = (
+  left: readonly number[],
+  right: readonly number[]
+): number[] => {
   const result: number[] = [];
 
-  while (left.length && right.length) {
-    if (left[0] <= right[0]) {
-      result.push(left.shift() as number);
+  let rightIndex = 0;
+  let leftIndex = 0;
+
+  while (leftIndex < left.length && rightIndex < right.length) {
+    if (left[leftIndex] <= right[rightIndex]) {
+      result.push(left[leftIndex++]);
     } else {
-      result.push(right.shift() as number);
+      result.push(right[rightIndex++]);
     }
   }
 
-  while (left.length) {
-    result.push(left.shift() as number);
-  }
-
-  while (right.length) {
-    result.push(right.shift() as number);
-  }
-
-  return result;
+  return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
 };
 
 const merge = (input: readonly number[]): number[] => {
