@@ -6,8 +6,12 @@ export default (
   sorter: (n: readonly number[]) => number[]
 ): void => {
   describe(`${name} sort`, () => {
-    it("should sort array", () => {
+    it("should sort even array", () => {
       expect(sorter([3, 1, 4, 2])).to.eql([1, 2, 3, 4]);
+    });
+
+    it("should sort odd array", () => {
+      expect(sorter([3, 5, 1, 4, 2])).to.eql([1, 2, 3, 4, 5]);
     });
 
     it("should sort short array", () => {
