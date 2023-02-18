@@ -37,11 +37,11 @@ export default (
     });
 
     it("should handle empty array", () => {
-      expect([]).to.eql([]);
+      expect(sorter([])).to.eql([]);
     });
 
     it("should handle one element array", () => {
-      expect([1]).to.eql([1]);
+      expect(sorter([1])).to.eql([1]);
     });
   });
 };
