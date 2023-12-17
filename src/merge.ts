@@ -1,6 +1,6 @@
 const _merge = (
   left: readonly number[],
-  right: readonly number[]
+  right: readonly number[],
 ): number[] => {
   const result: number[] = [];
 

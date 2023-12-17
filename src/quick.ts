@@ -22,7 +22,7 @@ const partition = (items: number[], left: number, right: number): number => {
 const quick = (
   items: number[],
   left = 0,
-  right = items.length - 1
+  right = items.length - 1,
 ): number[] => {
   if (items.length > 1) {
     const index = partition(items, left, right);
